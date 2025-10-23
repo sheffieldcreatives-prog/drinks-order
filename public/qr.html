@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Drinks Order QR</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body { font-family: system-ui, -apple-system, Arial; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+      .card { text-align:center; padding:20px; border-radius:8px; box-shadow:0 4px 14px rgba(0,0,0,0.08); }
+      img { max-width:280px; height:auto; }
+      a { word-break: break-all; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Scan to open Drinks Order</h2>
+      <canvas id="qrCanvas"></canvas>
+      <p id="urlText"></p>
+      <p class="small text-muted">Tip: open this page and scan the code with a phone camera.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <script>
+      (function(){
+        // Build base URL (origin). If hosted under a path, you can adjust accordingly.
+        const baseUrl = location.origin + location.pathname.replace(/\/qr\.html$/, '') || location.origin + '/';
+        document.getElementById('urlText').innerHTML = '<a href="' + baseUrl + '">' + baseUrl + '</a>';
+        const canvas = document.getElementById('qrCanvas');
+        QRCode.toCanvas(canvas, baseUrl, { margin: 2 }, function (error) {
+          if (error) {
+            console.error(error);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
