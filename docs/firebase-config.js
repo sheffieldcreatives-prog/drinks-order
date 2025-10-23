@@ -1,4 +1,6 @@
-// public/firebase-config.js
+// Firebase configuration for Drinks Order app
+// This must be loaded before app.js
+
 window.FIREBASE_CONFIG = {
   apiKey: "AIzaSyDs__o-OanlqbDAbIXa1J8oJxPtxLmapW8",
   authDomain: "drinks-or.firebaseapp.com",
