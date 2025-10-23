@@ -1,9 +1,9 @@
-name: Deploy GitHub Pages (public/)
+name: Deploy GitHub Pages (docs/)
 
 on:
   push:
     branches:
-      - main
+      - root
   workflow_dispatch:
 
 jobs:
