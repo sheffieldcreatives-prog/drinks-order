@@ -2,7 +2,7 @@
 // Requires public/firebase-config.js to exist and set window.FIREBASE_CONFIG
 
 if (!window.FIREBASE_CONFIG) {
-  console.error("Missing Firebase config — add public/firebase-config.js.");
+  console.error("Missing Firebase config — add docs/firebase-config.js.");
 }
 
 firebase.initializeApp(window.FIREBASE_CONFIG);
