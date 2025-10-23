@@ -1,5 +1,11 @@
-// Save this file as public/firebase-config.js before deploying.
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDs__o-OanlqbDAbIXa1J8oJxPtxLmapW8",
   authDomain: "drinks-or.firebaseapp.com",
@@ -10,12 +16,6 @@ const firebaseConfig = {
   measurementId: "G-R48G73RJGG"
 };
 
-// Expose to window for the app to read
-window.FIREBASE_CONFIG = FIREBASE_CONFIG;
-
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-
-// Get a reference to the services you need
-const auth = app.auth(); // Or getAuth(app) for modular v9+
-const db = app.firestore(); // Or getFirestore(app) for modular v9+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
