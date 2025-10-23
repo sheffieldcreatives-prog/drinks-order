@@ -25,3 +25,10 @@ const firebaseConfig = {
 
 // Expose to window for the app to read
 window.FIREBASE_CONFIG = FIREBASE_CONFIG;
+
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+
+// Get a reference to the services you need
+const auth = app.auth(); // Or getAuth(app) for modular v9+
+const db = app.firestore(); // Or getFirestore(app) for modular v9+
