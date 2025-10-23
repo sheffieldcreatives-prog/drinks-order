@@ -1,7 +1,7 @@
 ```markdown
 ## Deploying to GitHub Pages with Firebase
 
-This repo contains a static frontend (public/) that uses Firebase Firestore for storage.
+This repo contains a static frontend (docs/) that uses Firebase Firestore for storage.
 To publish to GitHub Pages and use Firebase:
 
 1. Create a Firebase project:
@@ -30,7 +30,7 @@ To publish to GitHub Pages and use Firebase:
 
 4. Publish to GitHub Pages:
    - Merge changes to main (the workflow runs on push to main).
-   - The workflow will publish ./public to the gh-pages branch automatically.
+   - The workflow will publish ./docs to the gh-pages branch automatically.
    - In repository settings → Pages, set the Source to the gh-pages branch (if not set automatically).
    - Your site will be available at https://<your-org-or-username>.github.io/<repo>.
 
